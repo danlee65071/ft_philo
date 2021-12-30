@@ -19,7 +19,7 @@ void	philo_waiter(t_data *data, t_philo *philo)
 		{
 			pthread_mutex_lock(&data->mutex_write);
 			printf("%ld %d %s\n", get_current_time(data),
-				   philo[i].philo_ind, "died");
+				   philo[i].philo_ind + 1, "died");
 			break ;
 		}
 		pthread_mutex_unlock(&data->mutex_eat);
